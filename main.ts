@@ -12,11 +12,11 @@ Tinybit.RGB_Car_Program().show()
 basic.forever(function () {
     distance = Tinybit.Ultrasonic_Car()
     if (Tinybit.Line_Sensor(Tinybit.enPos.LeftState, Tinybit.enLineState.White) && Tinybit.Line_Sensor(Tinybit.enPos.RightState, Tinybit.enLineState.White)) {
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 60)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 20)
     } else if (Tinybit.Line_Sensor(Tinybit.enPos.LeftState, Tinybit.enLineState.Black) && Tinybit.Line_Sensor(Tinybit.enPos.RightState, Tinybit.enLineState.White)) {
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Left, 60)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Left, 20)
     } else if (Tinybit.Line_Sensor(Tinybit.enPos.LeftState, Tinybit.enLineState.White) && Tinybit.Line_Sensor(Tinybit.enPos.RightState, Tinybit.enLineState.Black)) {
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Right, 60)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Right, 20)
     } else {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Stop, 0)
     }
